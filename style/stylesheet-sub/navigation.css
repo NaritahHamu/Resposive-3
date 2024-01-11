@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "roboto-reg";
+  src: url(/style/fonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: "roboto-med";
+  src: url(/style/fonts/Roboto-Medium.ttf);
+}
+@font-face {
+  font-family: "roboto-bold";
+  src: url(/style/fonts/Roboto-Bold.ttf);
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+nav .logo {
+  width: 100%;
+  max-width: 270px;
+}/*# sourceMappingURL=navigation.css.map */

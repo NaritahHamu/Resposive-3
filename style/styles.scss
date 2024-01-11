@@ -1,0 +1,154 @@
+$background-color: #FAFAFF;
+$comp-blue: #3333FF;
+$black: #2A2A2A;
+$faint-grey: #E9E9EE;
+
+@font-face {
+    font-family: "roboto-reg";
+    src: url(/style/fonts/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: "roboto-med";
+    src: url(/style/fonts/Roboto-Medium.ttf);
+}
+@font-face {
+    font-family: "roboto-bold";
+    src: url(/style/fonts/Roboto-Bold.ttf);
+}
+
+@mixin flex($direction, $justify-content, $align-items, $wrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-wrap: $wrap;
+}
+
+@import '../style/stylesheet-sub/navigation.scss';
+
+*{
+    font-family: roboto-reg;
+    color: $black;
+}
+
+button{
+    border: none;
+    padding: 0;
+    margin: 0;      
+}
+
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: $background-color;
+
+    @include flex(column, center, center, nowrap);
+}
+
+.divider{
+    width: 100%;
+    height: 2px;
+    background-color: $faint-grey;
+}
+
+nav{
+    width: 100%;
+    max-width: 1180px;
+    padding: 20px 32px;
+    box-sizing: border-box;
+
+    @include flex(row, space-between, center, wrap);
+
+    .logo-container{
+        width: 50%;
+
+        .logo{
+            width: 100%;
+            max-width: 270px;
+            min-width: 200px;
+        }
+    }
+
+    .desktop-nav-container{
+        width: 50%;
+
+        ul{
+            list-style: none;
+            text-transform: uppercase;
+
+            button{
+                background-color: $background-color;
+
+                p{
+                    font-family: roboto-bold, Arial, Helvetica, sans-serif;
+                    text-transform: uppercase;
+                    font-size: 18px;
+                    margin: 0;
+                    padding: 15px;
+                }
+                p:after{
+                    display:block;
+                    content: '';
+                    border-bottom: solid 4px $comp-blue;  
+                    transform: scaleX(0);  
+                    transition: transform 300ms ease-in-out;
+                }
+                p:hover:after{
+                    transform: scaleX(1);
+                }
+                p.fromLeft:after{
+                    transform-origin: 0% 50%;
+                }
+
+            }
+
+            @include flex(row, flex-end, center, nowrap);
+        }
+    }
+
+    .mobile-nav-container{
+        display: none;
+
+        ul{
+            list-style: none;
+            @include flex(column, center, flex-start, nowrap)
+        }
+
+        li{
+            width: 40px;
+            height: 5px;
+            margin: 5px 10px;
+            background-color: $black;
+        }
+
+        li:nth-child(3){
+            width: 27px;
+        }
+
+        
+
+    }
+}
+
+.main-wrapper{
+    width: 100%;
+    max-width: 1400px;
+    box-sizing: border-box;
+    padding: 0 5vw;
+
+    @include flex(column, center, center, nowrap);
+}
+
+@media screen and (max-width: 850px) {
+    nav{
+        padding: 3vw 4vw;
+
+        .desktop-nav-container{
+            display: none;
+        }
+        .mobile-nav-container{
+            display: flex;
+        }
+    }
+}
