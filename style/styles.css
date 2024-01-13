@@ -180,10 +180,10 @@ body {
 
 .divider {
   width: 94%;
-  height: 0.22vh;
+  height: 0.4vh;
   background-color: #2A2A2A;
   margin: 0 7vw;
-  margin-bottom: 1.5vw;
+  margin-bottom: 1.1vw;
   box-sizing: border-box;
 }
 
@@ -207,14 +207,31 @@ body {
   flex-wrap: nowrap;
   width: 100%;
   box-sizing: border-box;
+  /*css for manual slide navigation*/
+  /*css for automatic navigation*/
 }
-.landing-page .banner {
+.landing-page .slider {
   width: 94%;
+  max-height: 370px;
   max-width: 1400px;
   margin: 0 7vw;
   overflow: hidden;
+  border-radius: 3px;
+  position: relative;
 }
-.landing-page .banner img {
+.landing-page .slides {
+  width: 500%;
+  height: 30vw;
+  display: flex;
+}
+.landing-page .slides input {
+  display: none;
+}
+.landing-page .slide {
+  width: 20%;
+  transition: 3s;
+}
+.landing-page .slide img {
   width: 100%;
   height: 30vw;
   max-height: 370px;
@@ -222,6 +239,71 @@ body {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+}
+.landing-page .navigation-manual {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  max-width: 1400px;
+  padding-bottom: 2vw;
+  box-sizing: border-box;
+}
+.landing-page .manual-btn {
+  height: 0.8vw;
+  width: 0.8vw;
+  border: 2px solid #FAFAFF;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 1s;
+}
+.landing-page .manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+.landing-page .manual-btn:hover {
+  background: #3333FF;
+}
+.landing-page #radio1:checked ~ .first {
+  margin-left: 0;
+}
+.landing-page #radio2:checked ~ .first {
+  margin-left: -20%;
+}
+.landing-page #radio3:checked ~ .first {
+  margin-left: -40%;
+}
+.landing-page .navigation-auto {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  max-width: 1400px;
+  padding-bottom: 2vw;
+  box-sizing: border-box;
+}
+.landing-page .navigation-auto div {
+  height: 0.8vw;
+  width: 0.8vw;
+  border: 2px solid #FAFAFF;
+  border-radius: 20px;
+  transition: 1s;
+}
+.landing-page .navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+.landing-page #radio1:checked ~ .navigation-auto .auto-btn1 {
+  background: #FAFAFF;
+}
+.landing-page #radio2:checked ~ .navigation-auto .auto-btn2 {
+  background: #FAFAFF;
+}
+.landing-page #radio3:checked ~ .navigation-auto .auto-btn3 {
+  background: #FAFAFF;
 }
 
 @media screen and (max-width: 850px) {
@@ -233,5 +315,8 @@ body {
   }
   nav .mobile-nav-container {
     display: flex;
+  }
+  .divider {
+    height: 0.3vh;
   }
 }/*# sourceMappingURL=styles.css.map */

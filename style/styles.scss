@@ -48,10 +48,10 @@ body{
 
 .divider{
     width: 94%;
-    height: .22vh;
+    height: .4vh;
     background-color: $black;
     margin: 0 7vw;
-    margin-bottom: 1.5vw;
+    margin-bottom: 1.1vw;
     box-sizing: border-box;
 }
 
@@ -70,20 +70,120 @@ body{
     width: 100%;
     box-sizing: border-box;
 
-    .banner{
-        width: 94%;
-        max-width: 1400px;
-        margin: 0 7vw;
-        overflow: hidden;
-
-        img{
-            width: 100%;
-            height: 30vw;
-            max-height: 370px;
-            object-fit: cover;
-            object-position: center;
-        }
-
+    .slider{
+      width: 94%;
+      max-height: 370px;
+      max-width: 1400px;
+      margin: 0 7vw;
+      overflow: hidden;
+      border-radius: 3px;
+      position: relative;
+    }
+    
+    .slides{
+      width: 500%;
+      height: 30vw;
+      display: flex;
+    }
+    
+    .slides input{
+      display: none;
+    }
+    
+    .slide{
+      width: 20%;
+      transition: 3s;
+    }
+    
+    .slide img{
+      width: 100%;
+      height: 30vw;
+      max-height: 370px;
+      object-fit: cover;
+      object-position: center;
+    }
+    
+    /*css for manual slide navigation*/
+    
+    .navigation-manual{
+      position: absolute;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      max-width: 1400px;
+      padding-bottom: 2vw;
+      box-sizing: border-box;
+    }
+    
+    .manual-btn{
+      height: .8vw;
+      width: .8vw;
+      border: 2px solid #FAFAFF;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 1s;
+    }
+    
+    .manual-btn:not(:last-child){
+      margin-right: 40px;
+    }
+    
+    .manual-btn:hover{
+      background: #3333FF;
+    }
+    
+    #radio1:checked ~ .first{
+      margin-left: 0;
+    }
+    
+    #radio2:checked ~ .first{
+      margin-left: -20%;
+    }
+    
+    #radio3:checked ~ .first{
+      margin-left: -40%;
+    }
+    
+    /*css for automatic navigation*/
+    
+    .navigation-auto{
+      position: absolute;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      max-width: 1400px;
+      padding-bottom: 2vw;
+      box-sizing: border-box;
+    
+    }
+    
+    .navigation-auto div{
+      height: .8vw;
+      width: .8vw;
+      border: 2px solid #FAFAFF;
+      border-radius: 20px;
+      transition: 1s;
+    }
+    
+    .navigation-auto div:not(:last-child){
+      margin-right: 40px;
+    }
+    
+    #radio1:checked ~ .navigation-auto .auto-btn1{
+      background: #FAFAFF;
+    }
+    
+    #radio2:checked ~ .navigation-auto .auto-btn2{
+      background: #FAFAFF;
+    }
+    
+    #radio3:checked ~ .navigation-auto .auto-btn3{
+      background: #FAFAFF;
     }
 }
 
@@ -98,5 +198,8 @@ body{
         .mobile-nav-container{
             display: flex;
         }
+    }
+    .divider{
+        height: .3vh;
     }
 }
