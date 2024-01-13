@@ -1,7 +1,6 @@
 nav{
     width: 100%;
-    max-width: 1180px;
-    padding: 20px 32px;
+    padding: 20px 7vw 15px 7vw;
     box-sizing: border-box;
 
     @include flex(row, space-between, center, wrap);

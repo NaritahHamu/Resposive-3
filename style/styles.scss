@@ -47,170 +47,46 @@ body{
 }
 
 .divider{
-    width: 100%;
-    height: 1.5px;
+    width: 94%;
+    height: .22vh;
     background-color: $black;
-}
-
-nav{
-    width: 100%;
-    max-width: 1180px;
-    padding: 20px 32px;
+    margin: 0 7vw;
+    margin-bottom: 1.5vw;
     box-sizing: border-box;
-
-    @include flex(row, space-between, center, wrap);
-
-    .logo-container{
-        width: 50%;
-
-        .logo{
-            width: 100%;
-            max-width: 270px;
-            min-width: 200px;
-        }
-    }
-
-    .desktop-nav-container{
-        width: 50%;
-
-        ul{
-            list-style: none;
-            text-transform: uppercase;
-
-            button{
-                background-color: $background-color;
-
-                p{
-                    display: inline-block;
-                    font-family: roboto-bold, Arial, Helvetica, sans-serif;
-                    text-transform: uppercase;
-                    font-size: 18px;
-                    margin: 0;
-                    padding: 15px;
-                }
-                p:after{
-                    display:block;
-                    content: '';
-                    border-bottom: solid 4px $comp-blue;  
-                    transform: scaleX(0);  
-                    transition: transform 300ms ease-in-out;
-                }
-                p:hover:after{
-                    transform: scaleX(1);
-                }
-                p.fromLeft:after{
-                    transform-origin: 0% 50%;
-                }
-
-            }
-
-            @include flex(row, flex-end, center, nowrap);
-        }
-    }
-
-    .mobile-nav-container{
-        position: relative;
-        display: none;
-        width: 50px;
-        
-
-        ul{
-            position: absolute;
-            list-style: none;
-            z-index: 4;
-            top: -40px;
-            padding: 0;
-            @include flex(column, center, flex-start, nowrap)
-        }
-        li{
-            width: 40px;
-            height: 5px;
-            margin: 5px 10px;
-            background-color: $black;
-
-            transition: transform 0.3s ease-in-out, width 0.3s ease-in-out, opacity 0.2s ease-in-out;
-        }
-        li:nth-child(3){
-            width: 27px;
-        }
-        .hamburger-menu-icon.menu-toggle-icon{
-            li{
-                &:nth-of-type(1){transform: (translateY(15px) rotate(45deg));}
-                &:nth-of-type(2){opacity: 0;}
-                &:nth-of-type(3){transform: (translateY(-14px) rotate(-45deg));
-                    width: (40px)
-                }
-            }
-        }
-        .mobile-menu{
-            position: absolute;
-            z-index: 2;
-            width: 300px;
-            height: 360px;
-            top: -400px;
-            left: -170px;
-            background-color: $background-color;
-            border-radius: 1px;
-            transition: all .3s ease-in-out;
-            overflow: hidden;
-            box-shadow: 0 4px 8px 0 rgba(62, 62, 62, 0.1), 0 6px 20px 0 rgba(0, 0, 1, .01);
-            opacity: 0;
-
-            ul{
-                position: absolute;
-                top: 50px;
-                left: 10px;
-                list-style: none;
-                text-transform: uppercase;
-
-                li{
-                    margin: 25px 10px;
-                }
-    
-                button{
-                    background-color: $background-color;
-    
-                    p{
-                        display: inline-block;
-                        font-family: roboto-bold, Arial, Helvetica, sans-serif;
-                        text-transform: uppercase;
-                        font-size: 18px;
-                        margin: 0;
-                        padding: 15px;
-                    }
-                    p:after{
-                        display:block;
-                        content: '';
-                        border-bottom: solid 4px $comp-blue;  
-                        transform: scaleX(0);  
-                        transition: transform 300ms ease-in-out;
-                    }
-                    p:hover:after{
-                        transform: scaleX(1);
-                    }
-                    p.fromLeft:after{
-                        transform-origin: 0% 50%;
-                    }
-    
-                }
-            }
-        }
-        .mobile-menu.menu-toggle-menu{
-            display: flex;
-            top: -63px;
-            opacity: 1;
-        }
-    }
 }
+
 
 .main-wrapper{
+    @include flex(column, center, center, nowrap);
+
     width: 100%;
     max-width: 1400px;
+    overflow: hidden;
     box-sizing: border-box;
-    padding: 0 5vw;
-
-    @include flex(column, center, center, nowrap);
 }
+
+.landing-page{
+    @include flex(column, center, center, nowrap);
+    width: 100%;
+    box-sizing: border-box;
+
+    .banner{
+        width: 94%;
+        max-width: 1400px;
+        margin: 0 7vw;
+        overflow: hidden;
+
+        img{
+            width: 100%;
+            height: 30vw;
+            max-height: 370px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+    }
+}
+
 
 @media screen and (max-width: 850px) {
     nav{
