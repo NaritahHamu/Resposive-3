@@ -16,18 +16,26 @@
             </div>
             <div class="desktop-nav-container">
                 <ul>
-                    <li><button class="home-btn" id="home-btn"><p class="fromLeft">Home</p></button></li>
-                    <li><button class="services-btn" id="services-btn"><p class="fromLeft">Services</p></button></li>
-                    <li><button class="about-btn" id="about-btn"><p class="fromLeft">About</p></button></li>
-                    <li><button class="contact-btn" id="contact-btn"><p class="fromLeft">Contact</p></button></li>
+                    <li><button class="home-btn" id="home"><p class="fromLeft">Home</p></button></li>
+                    <li><button class="services-btn" id="services"><p class="fromLeft">Services</p></button></li>
+                    <li><button class="about-btn" id="about"><p class="fromLeft">About</p></button></li>
+                    <li><button class="contact-btn" id="contact"><p class="fromLeft">Contact</p></button></li>
                 </ul>
             </div>
             <div class="mobile-nav-container">
-                <ul class="hamburger-menu-icon">
+                <ul id="menu-icon" class="hamburger-menu-icon" onclick="menuToggle()">
                     <li></li>
                     <li></li>
                     <li></li>
                 </ul>
+                <div id="mobile-menu" class="mobile-menu">
+                    <ul>
+                        <li><button class="home-btn" id="home" onclick="navSelect(this.id)"><p class="fromLeft">Home</p></button></li>
+                        <li><button class="services-btn" id="services" onclick="navSelect(this.id)"><p class="fromLeft">Services</p></button></li>
+                        <li><button class="about-btn" id="about" onclick="navSelect(this.id)"><p class="fromLeft">About</p></button></li>
+                        <li><button class="contact-btn" id="contact" onclick="navSelect(this.id)"><p class="fromLeft">Contact</p></button></li>
+                    </ul>
+                </div>
             </div> 
         </nav>
         <div class="divider"></div>
