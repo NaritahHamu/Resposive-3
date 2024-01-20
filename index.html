@@ -9,17 +9,17 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="main-wrapper">
+    <div id="main-wrapper" class="main-wrapper">
         <nav>
             <div class="logo-container">
                 <img class="logo" src="/images/logo/INT-Logo.gif">
             </div>
             <div class="desktop-nav-container">
                 <ul>
-                    <li><button class="home-btn" id="home"><p class="fromLeft">Home</p></button></li>
-                    <li><button class="services-btn" id="services"><p class="fromLeft">Services</p></button></li>
-                    <li><button class="about-btn" id="about"><p class="fromLeft">About</p></button></li>
-                    <li><button class="contact-btn" id="contact"><p class="fromLeft">Contact</p></button></li>
+                    <li><button class="home-btn" id="home" onclick="loadPage('/pages/home.html')"><p class="fromLeft">Home</p></button></li>
+                    <li><button class="services-btn" id="services" onclick="loadPage('/pages/services.html')"><p class="fromLeft">Services</p></button></li>
+                    <li><button class="about-btn" id="about" onclick="loadPage('/pages/about.html')"><p class="fromLeft" onclick="loadPage('about.html')">About</p></button></li>
+                    <li><button class="contact-btn" id="contact" onclick="loadPage('/pages/contact.html')"><p class="fromLeft">Contact</p></button></li>
                 </ul>
             </div>
             <div class="mobile-nav-container">
@@ -30,48 +30,28 @@
                 </ul>
                 <div id="mobile-menu" class="mobile-menu">
                     <ul>
-                        <li><button class="home-btn" id="home" onclick="navSelect(this.id)"><p class="fromLeft">Home</p></button></li>
-                        <li><button class="services-btn" id="services" onclick="navSelect(this.id)"><p class="fromLeft">Services</p></button></li>
-                        <li><button class="about-btn" id="about" onclick="navSelect(this.id)"><p class="fromLeft">About</p></button></li>
-                        <li><button class="contact-btn" id="contact" onclick="navSelect(this.id)"><p class="fromLeft">Contact</p></button></li>
+                        <li><button class="home-btn" id="home" onclick="loadPage('/pages/home.html')"><p class="fromLeft">Home</p></button></li>
+                        <li><button class="services-btn" id="services" onclick="loadPage('/pages/services.html')"><p class="fromLeft">Services</p></button></li>
+                        <li><button class="about-btn" id="about" onclick="loadPage('/pages/about.html')"><p class="fromLeft" onclick="loadPage('about.html')">About</p></button></li>
+                        <li><button class="contact-btn" id="contact" onclick="loadPage('/pages/contact.html')"><p class="fromLeft">Contact</p></button></li>
                     </ul>
                 </div>
             </div> 
         </nav>
         <div class="divider"></div>
-        <div class="content-wrapper">
-            <div class="landing-page">
-                <div class="slider">
-                    <div class="slides">
-                      <input type="radio" name="radio-btn" id="radio1">
-                      <input type="radio" name="radio-btn" id="radio2">
-                      <input type="radio" name="radio-btn" id="radio3">
-                      <div class="slide first">
-                        <img src="/images/banner/banner-1.png" alt="">
-                      </div>
-                      <div class="slide">
-                        <img src="/images/banner/banner-2.png" alt="">
-                      </div>
-                      <div class="slide">
-                        <img src="/images/banner/banner-3.png" alt="">
-                      </div>
-                      <div class="navigation-auto">
-                        <div class="auto-btn1"></div>
-                        <div class="auto-btn2"></div>
-                        <div class="auto-btn3"></div>
-                      </div>
-                      <div class="navigation-manual">
-                        <label for="radio1" class="manual-btn" onClick=pause()></label>
-                        <label for="radio2" class="manual-btn" onClick=pause()></label>
-                        <label for="radio3" class="manual-btn" onClick=pause()></label>
-                      </div>
-                    </div>
-              
-                  </div>
-            </div>
+        <div id="content" class="content-wrapper">
+            
         </div>
-        <div class="divider"></div>
-        <footer></footer>
+        <footer>
+          <div class="footer-details">
+            <p>info@interactiveservicesltd.com<br>
+              +356 27478125</p>
+          </div>
+          <div class="footer-details">
+            <p>©2024 Installations Network Technologies<br>
+              All Rights Reserved.</p>
+          </div>
+        </footer>
     </div>
 </body>
 </html>
