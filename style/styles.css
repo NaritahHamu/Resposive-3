@@ -10,6 +10,18 @@
   font-family: "roboto-bold";
   src: url(/style/fonts/Roboto-Bold.ttf);
 }
+@font-face {
+  font-family: "roboto-reg";
+  src: url(/style/fonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: "roboto-med";
+  src: url(/style/fonts/Roboto-Medium.ttf);
+}
+@font-face {
+  font-family: "roboto-bold";
+  src: url(/style/fonts/Roboto-Bold.ttf);
+}
 * {
   font-family: roboto-reg;
   color: #2A2A2A;
@@ -218,6 +230,11 @@ nav .mobile-nav-container .mobile-menu.menu-toggle-menu {
   box-sizing: border-box;
 }
 
+.page-title {
+  font-size: 28px;
+  margin: 20px 0;
+}
+
 footer {
   display: flex;
   flex-direction: row;
@@ -246,6 +263,10 @@ footer .footer-details p {
   font-size: 14px;
 }
 
+.content-wrapper {
+  width: 94%;
+}
+
 .landing-page {
   display: flex;
   flex-direction: column;
@@ -262,6 +283,7 @@ footer .footer-details p {
   min-height: 220px;
   max-width: 1400px;
   margin: 0 7vw;
+  margin-top: 30px;
   overflow: hidden;
   border-radius: 3px;
   position: relative;
@@ -360,10 +382,6 @@ footer .footer-details p {
   background-color: #3333FF;
   color: #fff;
 }
-.services-wrapper .page-title {
-  font-size: 28px;
-  margin: 20px 0;
-}
 .services-wrapper .services-title {
   font-family: roboto-reg, Arial, Helvetica, sans-serif;
   font-size: 21px;
@@ -411,70 +429,74 @@ footer .footer-details p {
 }
 
 .contact-wrapper {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  width: 96%;
-  left: 0%;
-  font-family: roboto-med;
-  font-size: 25px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+.contact-wrapper ul {
+  list-style-type: none;
+  font-family: roboto, Arial, Helvetica, sans-serif;
 }
 .contact-wrapper .main-block {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   width: 100%;
-  max-width: 1010px;
+  margin-bottom: 30px;
+  padding: 5px;
+  box-sizing: content-box;
 }
-.contact-wrapper .main-block .contact-block {
-  width: 49%;
-  min-width: 372px;
-  height: 320px;
-  margin: 7px;
+.contact-wrapper .contact-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 46%;
+  max-width: 400px;
+  min-width: 367px;
+  height: 400px;
+  background: #fff;
+  padding: 10px 0;
+  margin: 10px;
   box-sizing: border-box;
-  padding: 15px 15px 15px 30px;
-  background-color: #fff;
-  border-radius: 1px;
 }
-.contact-wrapper .main-block .contact-block h4 {
-  font-family: roboto-med, Arial, Helvetica, sans-serif;
-  font-size: 22px;
+.contact-wrapper .contact-block .contact-title {
+  font-size: 24px;
+}
+.contact-wrapper .contact-block .address-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+.contact-wrapper .contact-block .address-block ul {
   margin-bottom: 10px;
+  margin-top: 0;
 }
-.contact-wrapper .main-block .contact-block ul {
-  font-family: roboto-reg, Arial, Helvetica, sans-serif;
+.contact-wrapper .contact-block .address-block ul .list-title {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+.contact-wrapper .contact-block .address-block ul li {
   font-size: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 1px;
 }
-.contact-wrapper .main-block .contact-block ul .list-title {
-  font-family: roboto-med, Arial, Helvetica, sans-serif;
-  font-size: 18px;
-}
-.contact-wrapper .main-block .contact-block .mob-email {
-  text-align: left;
-}
-.contact-wrapper .main-block .contact-block .contact-heading-block {
-  text-align: center;
-}
-.contact-wrapper .main-block .contact-block .contact-body-block .list-title {
-  margin-bottom: 5px;
-}
-.contact-wrapper .main-block .contact-block .contact-bottom-block {
+.contact-wrapper .contact-block .tel-email {
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
 }
 .contact-wrapper .map-block {
-  width: 100%;
-  max-width: 997px;
-  min-width: 372px;
-  height: 400px;
-  background-color: lightblue;
-  margin: 7px 7px 30px 7px;
-  overflow: hidden;
-}
-.contact-wrapper .map-block .map-block-iframe {
-  width: 100%;
-  height: 100%;
+  padding: 0 !important;
 }
 
 .about-wrapper {

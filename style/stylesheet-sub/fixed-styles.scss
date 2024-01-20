@@ -1,3 +1,29 @@
+$background-color: #FAFAFF;
+$comp-blue: #3333FF;
+$black: #2A2A2A;
+$faint-grey: #E9E9EE;
+
+@font-face {
+    font-family: "roboto-reg";
+    src: url(/style/fonts/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: "roboto-med";
+    src: url(/style/fonts/Roboto-Medium.ttf);
+}
+@font-face {
+    font-family: "roboto-bold";
+    src: url(/style/fonts/Roboto-Bold.ttf);
+}
+
+@mixin flex($direction, $justify-content, $align-items, $wrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-wrap: $wrap;
+}
+
 *{
     font-family: roboto-reg;
     color: $black;
@@ -200,6 +226,11 @@ nav{
     margin: 0 30px;
     box-sizing: border-box;
 }
+
+.page-title{
+    font-size: 28px;
+    margin: 20px 0;
+  }
 
 footer{
   @include flex(row, space-between, center, nowrap);
