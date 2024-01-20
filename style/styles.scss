@@ -96,7 +96,6 @@
       button{
           min-width: 180px;
           border: 1px solid $black;
-          padding: 0;
           margin: -0.5px -1px;
           background: #fff;
           padding: 7px 12px;
@@ -105,10 +104,15 @@
           font-family: roboto-reg, Arial, Helvetica, sans-serif;
           font-size: 17px;
 
-          transition: all .03s ease-in;
+          transition: background-color 0.15s ease-in, color 0.15s ease-in;
       }
       button:hover{
           background-color: $comp-blue;
+          color: #fff;
+          
+      }
+      button.active{
+        background-color: $comp-blue;
           color: #fff;
           
       }
@@ -122,28 +126,42 @@
       font-size: 21px;
       margin-bottom: 40px;
   }
-  .services-text-block{
-      background-color: #fff;
-      color: #000;
-      font-family: robo-reg, Arial, Helvetica, sans-serif;
-      font-size: 16px;
-      padding: 20px;
-      margin-bottom: 40px;
+  .text-block{
+    margin-bottom: 40px;
   }
   .services-gallery-block{
-      width: 100%;
-      max-width: 980px;
+      width: 96%;
+      max-width: 1400px;
       margin-bottom: 40px;
 
       @include flex(row, center, center, wrap);
 
-      img{
-          margin: 5px;
-          width: 22%;
-          min-width: 150px;
-          height: auto;
-      }
-  }
+      .services-img{
+        @include flex(column, flex-end, flex-start, wrap );
+        
+
+        width: 23%;
+        min-width: 160px;
+        aspect-ratio: 1 / 1;
+        margin: 3px 7px 3px 0;
+        background-color: #3333FF;
+        box-sizing: border-box;
+        background-position: center center;
+        background-size: cover;
+
+        &:nth-child(1){
+          background-image: url('/images/gallery/home-gallery/go-cabling.png');
+        }
+        &:nth-child(2){
+          background-image: url('/images/gallery/home-gallery/mobile-antenna.png')
+        }
+        &:nth-child(3){
+          background-image: url('/images/gallery/home-gallery/solar-panels.png')
+        }
+        &:nth-child(4){
+          background-image: url('/images/gallery/home-gallery/IMG_1708.jpg')
+        }
+  }}
 
 }
 
@@ -312,24 +330,20 @@
     .divider{
         height: .3vh;
     }
-    .landing-page{
-      .slider{
-        .navigation-auto{
-          height: .8vw;
-          width: .8vw;
-        }
-        .manual-btn{
-          height: .8vw;
-          width: .8vw;
-        }
-      }
-    }
+
 }
 
 @media screen and (max-width: 512px) {
   .landing-page{
     .landing-gallery{
       .gal-img{
+        width: 160px;
+        height: 150px;
+        background-position: center center;
+      }
+    }
+    .services-gallery-block{
+      .services-img{
         width: 160px;
         height: 150px;
         background-position: center center;
