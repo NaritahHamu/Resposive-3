@@ -14,13 +14,27 @@ $(document).ready(function(){
   $("#main-wrapper").on('click', '[id*="read-more"]', function(){
     let x = $(this).attr("id");
     let y = x.split(" ")[1];
-    
-    $("#content").load("/pages/services.html");
 
-    servicesSelect(y)
-  })
+    // Wrap the asynchronous operation in a promise
+    let contentLoadPromise = new Promise(function(resolve, reject) {
+        $("#content").load("/pages/services.html", function(response, status, xhr) {
+            if (status == "success") {
+                resolve();
+            } else {
+                reject("Error loading content");
+            }
+        });
+    });
 
-})
+    // After content is loaded, call servicesSelect
+    contentLoadPromise.then(function() {
+        servicesSelect(y);
+    }).catch(function(error) {
+        console.error(error);
+    });
+  });
+
+});
 
 function servicesSelect(data){
 
@@ -114,7 +128,7 @@ function loadPage(page) {
 
 function active(x){
   $(".active").removeClass("active");
-  $(`"#"`).addClass("active");
+  $(`#${x}`).addClass("active");
 
-  console.log('Hello'+x);
+  console.log('Hello'+ x);
 }
