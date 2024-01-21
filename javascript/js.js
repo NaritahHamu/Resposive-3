@@ -1,5 +1,5 @@
 $(document).ready(function(){  
-  loadPage("/pages/home.html")
+  loadPage("/pages/services.html")
 
   $("#main-wrapper").on('click', '[id*="btn-service"]', function () {
 
@@ -9,11 +9,19 @@ $(document).ready(function(){
     
 
     servicesSelect(firstPart);
+    active(this);
+      
   });
 
   $("#main-wrapper").on('click', '[id*="read-more"]', function(){
     let x = $(this).attr("id");
     let y = x.split(" ")[1];
+
+    function toggleActive2(x){
+      console.log(x);
+      $(".active").removeClass("active");
+      $("." + x).addClass("active");
+    }
 
     // Wrap the asynchronous operation in a promise
     let contentLoadPromise = new Promise(function(resolve, reject) {
@@ -29,6 +37,7 @@ $(document).ready(function(){
     // After content is loaded, call servicesSelect
     contentLoadPromise.then(function() {
         servicesSelect(y);
+        toggleActive2(y);
     }).catch(function(error) {
         console.error(error);
     });
@@ -40,8 +49,9 @@ function servicesSelect(data){
 
   let servicesTitle = $("<h3></h3>").addClass("services-title")
 
+  let class2 = data;
+
   if ($(".services-title").length > 0) {
-    console.log("Title Block exists");
   } else {
     $(".services-nav-wrapper").after(servicesTitle);
   }
@@ -56,7 +66,7 @@ function servicesSelect(data){
         $(".services-img:nth-child(3)").css("background-image","url('/images/gallery/home-gallery/go-cabling.png')")
         $(".services-img:nth-child(4)").css("background-image","url('/images/gallery/home-gallery/go-cabling.png')")
         
-        active('BCS');
+        active(data);
         break;
 
       case 'FMS':
@@ -68,7 +78,7 @@ function servicesSelect(data){
         $(".services-img:nth-child(3)").css("background-image","url('/images/gallery/home-gallery/mobile-antenna.png')")
         $(".services-img:nth-child(4)").css("background-image","url('/images/gallery/home-gallery/mobile-antenna.png')")
         
-        active('FMS');
+        active(data);
         break;
 
       case 'FTTH':
@@ -80,7 +90,7 @@ function servicesSelect(data){
         $(".services-img:nth-child(3)").css("background-image","url('/images/gallery/home-gallery/solar-panels.png')")
         $(".services-img:nth-child(4)").css("background-image","url('/images/gallery/home-gallery/solar-panels.png')")
         
-        active('FTTH');
+        active(data);
         break;
 
       case 'LPS':
@@ -92,7 +102,7 @@ function servicesSelect(data){
         $(".services-img:nth-child(3)").css("background-image","url('/images/gallery/home-gallery/IMG_1708.jpg')")
         $(".services-img:nth-child(4)").css("background-image","url('/images/gallery/home-gallery/IMG_1708.jpg')")
         
-        active('LPS');
+        active(data);
         break;
 
       case 'TLC':
@@ -104,7 +114,7 @@ function servicesSelect(data){
         $(".services-img:nth-child(3)").css("background-image","url('/images/gallery/home-gallery/go-cabling.png')")
         $(".services-img:nth-child(4)").css("background-image","url('/images/gallery/home-gallery/IMG_1708.jpg')")
 
-        active('TLC');
+        active(data);
         break;
 
       default:
@@ -127,8 +137,7 @@ function loadPage(page) {
 }
 
 function active(x){
+  console.log(x);
   $(".active").removeClass("active");
-  $(`#${x}`).addClass("active");
-
-  console.log('Hello'+ x);
+  $(x).addClass("active");
 }
