@@ -10,7 +10,7 @@
     width: 100%;
     box-sizing: border-box;
 
-    .banner{
+    .banner-wrapper{
       width: 94%;
       height: 30vw;
       max-height: 320px;
@@ -23,6 +23,60 @@
       position: relative;
       margin-bottom: 30px;
       background: $comp-blue;
+
+      .banner-container{
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 200%;
+        height: 100%;
+        overflow: hidden;
+
+        .banner-img{
+          position: absolute;
+          height: 100%;
+          width: 50%;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;          
+          transition: transform .1s ease-in-out;
+
+          font-size: 80px;
+          color: red;
+          text-align: center;
+          justify-content: center;
+        }
+
+      }
+
+      :nth-child(1){
+        transform: translateX(0%);
+        transition: transform 1s ease-in-out;
+
+        :nth-child(1){
+          left: 0px;
+          background-image: url(/images/banner/banner-1.png);
+        }
+        :nth-child(2){
+          left: 0%;
+          background-image: url(/images/banner/banner-2.png);
+        }
+      }
+      :nth-child(2){
+        transform: translateX(100%);
+        transition: transform 1s ease-in-out;
+
+        :nth-child(1){
+          left: 0%;
+          background-image: url(/images/banner/banner-3.png);
+        }
+        :nth-child(2){
+          left: 0%;
+          background-image: url(/images/banner/banner-2.png);
+        }
+      }
     }
     
     .landing-page-text{
@@ -236,6 +290,7 @@
 
   }
   .map-block{
+    max-width: 560px;
     padding: 0 !important;
   }
 }
@@ -271,7 +326,7 @@
 
       .col{
           width: 33%;
-          min-width: 290px;
+          min-width: 257px;
           max-width: 370px;
           margin: 0 4px;
           
@@ -323,6 +378,16 @@
     }
     .divider{
         height: .3vh;
+    }
+    .about-wrapper{
+      .about-gallery-block{
+        flex-wrap: wrap;
+
+        .col{
+          width: 48%;
+          min-width: 300px;
+        }
+      }
     }
 
 }
