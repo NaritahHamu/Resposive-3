@@ -1,5 +1,5 @@
 $(document).ready(function(){  
-  loadPage("/pages/home.html");
+  loadPage("pages/home.html");
 
   $("#main-wrapper").on('click', '[id*="btn-service"]', function () {
 
@@ -56,10 +56,10 @@ function servicesSelect(data){
         $(".services-title").text("Building Control System");
         $("#servicesText").text("BCS BCS BCS Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
         
-        $(".services-img:nth-child(1)").css("background-image","url('/images/gallery/home-gallery/go-cabling.png')")
-        $(".services-img:nth-child(2)").css("background-image","url('/images/gallery/home-gallery/go-cabling.png')")
-        $(".services-img:nth-child(3)").css("background-image","url('/images/gallery/home-gallery/go-cabling.png')")
-        $(".services-img:nth-child(4)").css("background-image","url('/images/gallery/home-gallery/go-cabling.png')")
+        $(".services-img:nth-child(1)").css("background-image","url('images/gallery/home-gallery/go-cabling.png')")
+        $(".services-img:nth-child(2)").css("background-image","url('images/gallery/home-gallery/go-cabling.png')")
+        $(".services-img:nth-child(3)").css("background-image","url('images/gallery/home-gallery/go-cabling.png')")
+        $(".services-img:nth-child(4)").css("background-image","url('images/gallery/home-gallery/go-cabling.png')")
         
         serviceTabActive(data);
         break;
@@ -68,10 +68,10 @@ function servicesSelect(data){
         $(".services-title").text("Facility Managment System");
         $("#servicesText").text("FMS FMS FMS Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
       
-        $(".services-img:nth-child(1)").css("background-image","url('/images/gallery/home-gallery/mobile-antenna.png')")
-        $(".services-img:nth-child(2)").css("background-image","url('/images/gallery/home-gallery/mobile-antenna.png')")
-        $(".services-img:nth-child(3)").css("background-image","url('/images/gallery/home-gallery/mobile-antenna.png')")
-        $(".services-img:nth-child(4)").css("background-image","url('/images/gallery/home-gallery/mobile-antenna.png')")
+        $(".services-img:nth-child(1)").css("background-image","url('images/gallery/home-gallery/mobile-antenna.png')")
+        $(".services-img:nth-child(2)").css("background-image","url('images/gallery/home-gallery/mobile-antenna.png')")
+        $(".services-img:nth-child(3)").css("background-image","url('images/gallery/home-gallery/mobile-antenna.png')")
+        $(".services-img:nth-child(4)").css("background-image","url('images/gallery/home-gallery/mobile-antenna.png')")
         
         serviceTabActive(data);
         break;
@@ -80,10 +80,10 @@ function servicesSelect(data){
         $(".services-title").text("FTTH / WAN / LAN  Systems");
         $("#servicesText").text("FTTH FTTH FTHH Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
       
-        $(".services-img:nth-child(1)").css("background-image","url('/images/gallery/home-gallery/solar-panels.png')")
-        $(".services-img:nth-child(2)").css("background-image","url('/images/gallery/home-gallery/solar-panels.png')")
-        $(".services-img:nth-child(3)").css("background-image","url('/images/gallery/home-gallery/solar-panels.png')")
-        $(".services-img:nth-child(4)").css("background-image","url('/images/gallery/home-gallery/solar-panels.png')")
+        $(".services-img:nth-child(1)").css("background-image","url('images/gallery/home-gallery/solar-panels.png')")
+        $(".services-img:nth-child(2)").css("background-image","url('images/gallery/home-gallery/solar-panels.png')")
+        $(".services-img:nth-child(3)").css("background-image","url('images/gallery/home-gallery/solar-panels.png')")
+        $(".services-img:nth-child(4)").css("background-image","url('images/gallery/home-gallery/solar-panels.png')")
         
         serviceTabActive(data);
         break;
@@ -92,10 +92,10 @@ function servicesSelect(data){
         $(".services-title").text("Lighting Protection Systems");
         $("#servicesText").text("LPS LPS LPS Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
       
-        $(".services-img:nth-child(1)").css("background-image","url('/images/gallery/home-gallery/IMG_1708.jpg')")
-        $(".services-img:nth-child(2)").css("background-image","url('/images/gallery/home-gallery/IMG_1708.jpg')")
-        $(".services-img:nth-child(3)").css("background-image","url('/images/gallery/home-gallery/IMG_1708.jpg')")
-        $(".services-img:nth-child(4)").css("background-image","url('/images/gallery/home-gallery/IMG_1708.jpg')")
+        $(".services-img:nth-child(1)").css("background-image","url('images/gallery/home-gallery/IMG_1708.jpg')")
+        $(".services-img:nth-child(2)").css("background-image","url('images/gallery/home-gallery/IMG_1708.jpg')")
+        $(".services-img:nth-child(3)").css("background-image","url('images/gallery/home-gallery/IMG_1708.jpg')")
+        $(".services-img:nth-child(4)").css("background-image","url('images/gallery/home-gallery/IMG_1708.jpg')")
         
         serviceTabActive(data);
         break;
@@ -104,10 +104,10 @@ function servicesSelect(data){
         $(".services-title").text("Telecommunication Mobile & Fixed");
         $("#servicesText").text("TLC TLC TLC Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
       
-        $(".services-img:nth-child(1)").css("background-image","url('/images/gallery/home-gallery/solar-panels.png')")
-        $(".services-img:nth-child(2)").css("background-image","url('/images/gallery/home-gallery/mobile-antenna.png')")
-        $(".services-img:nth-child(3)").css("background-image","url('/images/gallery/home-gallery/go-cabling.png')")
-        $(".services-img:nth-child(4)").css("background-image","url('/images/gallery/home-gallery/IMG_1708.jpg')")
+        $(".services-img:nth-child(1)").css("background-image","url('images/gallery/home-gallery/solar-panels.png')")
+        $(".services-img:nth-child(2)").css("background-image","url('images/gallery/home-gallery/mobile-antenna.png')")
+        $(".services-img:nth-child(3)").css("background-image","url('images/gallery/home-gallery/go-cabling.png')")
+        $(".services-img:nth-child(4)").css("background-image","url('images/gallery/home-gallery/IMG_1708.jpg')")
 
         serviceTabActive(data);
         break;
