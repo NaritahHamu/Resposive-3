@@ -22,7 +22,7 @@ $(document).ready(function(){
     }
 
     let contentLoadPromise = new Promise(function(resolve, reject) {
-        $("#content").load("/pages/services.html", function(response, status, xhr) {
+        $("#content").load("pages/services.html", function(response, status, xhr) {
             if (status == "success") {
                 resolve();
             } else {
@@ -135,7 +135,7 @@ function serviceTabActive(x){
 }
 function loadBanner(page) {
   return new Promise(function(resolve, reject) {
-    if (page == "/pages/home.html") {
+    if (page == "pages/home.html") {
       // Simulate asynchronous loading of the dynamic content
       setTimeout(function() {
         resolve($("Resolved"));
