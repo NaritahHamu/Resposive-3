@@ -5,15 +5,15 @@ $faint-grey: #E9E9EE;
 
 @font-face {
     font-family: "roboto-reg";
-    src: url(style/fonts/Roboto-Regular.ttf);
+    src: url('style/fonts/Roboto-Regular.ttf');
 }
 @font-face {
     font-family: "roboto-med";
-    src: url(style/fonts/Roboto-Medium.ttf);
+    src: url('style/fonts/Roboto-Medium.ttf');
 }
 @font-face {
     font-family: "roboto-bold";
-    src: url(style/fonts/Roboto-Bold.ttf);
+    src: url('style/fonts/Roboto-Bold.ttf');
 }
 
 @mixin flex($direction, $justify-content, $align-items, $wrap) {
@@ -315,11 +315,11 @@ footer{
 
         :nth-child(1){
           left: 0px;
-          background-image: url(images/banner/banner-1.png);
+          background-image: url('images/banner-1.png');
         }
         :nth-child(2){
           left: 0%;
-          background-image: url(images/banner/banner-2.png);
+          background-image: url('images/banner-2.png');
         }
       }
       :nth-child(2){
@@ -328,11 +328,11 @@ footer{
 
         :nth-child(1){
           left: 0%;
-          background-image: url(images/banner/banner-3.png);
+          background-image: url('images/banner-3.png');
         }
         :nth-child(2){
           left: 0%;
-          background-image: url(images/banner/banner-2.png);
+          background-image: url('images/banner-2.png');
         }
       }
     }
@@ -362,19 +362,19 @@ footer{
         background-size: cover;
 
         &:nth-child(1){
-          background-image: url('images/gallery/home-gallery/go-cabling.png');
+          background-image: url('images/go-cabling.png');
         }
         &:nth-child(2){
-          background-image: url('images/gallery/home-gallery/mobile-antenna.png')
+          background-image: url('images/mobile-antenna.png')
         }
         &:nth-child(3){
-          background-image: url('images/gallery/home-gallery/solar-panels.png')
+          background-image: url('images/solar-panels.png')
         }
         &:nth-child(4){
-          background-image: url('images/gallery/home-gallery/IMG_1708.jpg')
+          background-image: url('images/IMG_1708.jpg')
         }
         &:nth-child(5){
-          background-image: url('images/gallery/home-gallery/vms-system.png')
+          background-image: url('images/vms-system.png')
         }
         
         p{
@@ -462,16 +462,16 @@ footer{
         background-size: cover;
 
         &:nth-child(1){
-          background-image: url('images/gallery/home-gallery/go-cabling.png');
+          background-image: url('images/go-cabling.png');
         }
         &:nth-child(2){
-          background-image: url('images/gallery/home-gallery/mobile-antenna.png')
+          background-image: url('images/mobile-antenna.png')
         }
         &:nth-child(3){
-          background-image: url('images/gallery/home-gallery/solar-panels.png')
+          background-image: url('images/solar-panels.png')
         }
         &:nth-child(4){
-          background-image: url('images/gallery/home-gallery/IMG_1708.jpg')
+          background-image: url('images/IMG_1708.jpg')
         }
   }}
 
